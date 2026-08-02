@@ -283,22 +283,53 @@ section{ padding:9rem 9%; position:relative; }
 .about-content p{ font-size:1.62rem; color:var(--gray); line-height:1.9; margin-bottom:2.6rem; max-width:56rem; }
 
 /*=========================================================
-                SKILLS
+                SKILLS — CATEGORIZED
 =========================================================*/
 .skills{ background:var(--bg); }
-.skills-container{ display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:2.6rem; }
+.skills-wrap{ display:flex; flex-direction:column; gap:5.5rem; max-width:1200px; margin:0 auto; }
+
+.skills-category{ width:100%; }
+
+.skills-cat-title{
+    display:flex; align-items:center; gap:1.2rem;
+    font-family:"JetBrains Mono",monospace; font-size:1.7rem; font-weight:500;
+    color:var(--cyan); letter-spacing:.04em; text-transform:uppercase;
+    margin-bottom:2.4rem; padding-bottom:1.2rem;
+    border-bottom:1px solid var(--border);
+}
+.skills-cat-title i{ font-size:2.2rem; }
+.skills-cat-title.java{ color:var(--amber); }
+
+.skills-grid{ display:grid; grid-template-columns:repeat(auto-fit,minmax(190px,1fr)); gap:2.2rem; }
+
 .skill-card{
     background:var(--glass); backdrop-filter:blur(18px); border:1px solid var(--border);
-    border-radius:var(--radius); padding:3rem 2rem; text-align:center; transition:.4s;
+    border-radius:var(--radius); padding:2.6rem 1.8rem; text-align:center; transition:.4s;
     position:relative; overflow:hidden;
 }
 .skill-card::before{ content:""; position:absolute; inset:0; background:linear-gradient(135deg,transparent,rgba(255,255,255,.05),transparent); transform:translateX(-100%); transition:.7s; }
 .skill-card:hover::before{ transform:translateX(100%); }
 .skill-card:hover{ transform:translateY(-10px); box-shadow:var(--shadow); border-color:var(--cyan); }
 .skill-card.java:hover{ border-color:var(--amber); box-shadow:0 0 35px rgba(255,182,72,.3); }
-.skill-card i{ font-size:5.4rem; color:var(--cyan); margin-bottom:1.6rem; }
+.skill-card i{ font-size:4.8rem; color:var(--cyan); margin-bottom:1.4rem; display:block; }
 .skill-card.java i{ color:var(--amber); }
-.skill-card h3{ font-size:1.9rem; font-weight:600; }
+.skill-card h4{ font-size:1.7rem; font-weight:600; }
+
+/*=========================================================
+                SKILLS — MOBILE
+=========================================================*/
+@media(max-width:768px){
+    .skills-wrap{ gap:4.5rem; }
+    .skills-cat-title{ font-size:1.5rem; margin-bottom:2rem; }
+    .skills-grid{ grid-template-columns:repeat(2,1fr); gap:1.6rem; }
+    .skill-card{ padding:2rem 1rem; }
+    .skill-card i{ font-size:3.6rem; margin-bottom:1rem; }
+    .skill-card h4{ font-size:1.4rem; }
+}
+@media(max-width:420px){
+    .skills-grid{ gap:1.2rem; }
+    .skill-card{ padding:1.8rem .8rem; border-radius:16px; }
+}
 
 /*=========================================================
                 PROJECTS
@@ -619,4 +650,9 @@ section{ padding:9rem 9%; position:relative; }
 
     color:#fff;
 
+}
+
+@media(max-width:768px){
+    .modal-box{ padding:26px; }
+    .modal-box h2{ font-size:2.4rem; }
 }
