@@ -1,23 +1,26 @@
+
+
+Index · HTML
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Adarsh Gadekar | Java Full Stack Developer</title>
-
+ 
 <link rel="stylesheet" href="style.css">
 <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 <link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700;800&family=Poppins:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 </head>
 <body>
-
+ 
 <div class="loader"><span></span></div>
 <div class="scroll-progress"></div>
-
+ 
 <canvas id="bg-canvas"></canvas>
 <div class="cursor-dot"></div>
 <div class="cursor-ring"></div>
-
+ 
 <!--================ HEADER ================-->
 <header class="header">
   <a href="#home" class="logo">Adarsh<span>.</span></a>
@@ -31,10 +34,10 @@
     <a href="#contact">Contact</a>
   </nav>
 </header>
-
+ 
 <!--================ HOME ================-->
 <section class="home" id="home">
-
+ 
   <div class="home-content">
     <span class="eyebrow reveal"><i class='bx bx-code-alt'></i> AVAILABLE FOR OPPORTUNITIES</span>
     <h3 class="reveal">Hello, I'm</h3>
@@ -45,54 +48,53 @@
       websites and scalable web applications using Java, HTML, CSS,
       JavaScript, Oracle SQL, JDBC, Servlets, JSP, and React.
     </p>
-
+ 
     <div class="social-media reveal">
       <a href="#" class="github" aria-label="GitHub"><i class='bx bxl-github'></i></a>
       <a href="#" class="linkedin" aria-label="LinkedIn"><i class='bx bxl-linkedin'></i></a>
       <a href="#" class="instagram" aria-label="Instagram"><i class='bx bxl-instagram'></i></a>
       <a href="#" class="twitter" aria-label="Twitter"><i class='bx bxl-twitter'></i></a>
     </div>
-
+ 
     <div class="buttons reveal">
       <a href="Adarsh_Gadekar_Resume_Updated.docx" class="btn" download>Download Resume</a>
       <a href="#contact" class="btn btn2">Hire Me</a>
     </div>
   </div>
-
+ 
   <div class="home-img">
     <div class="orbit-stage">
-
+ 
       <div class="orbit-ring ring-1"></div>
       <div class="orbit-ring ring-2"></div>
-
+ 
       <div class="orbit-layer" id="orbit-layer"></div>
-
+ 
       <div class="image-box-wrap">
         <div class="image-box" id="avatar-box">
           <img src="adarsh.jpeg" alt="Adarsh Gadekar" onerror="this.remove()">
           <span class="avatar-fallback">AG</span>
         </div>
       </div>
-
+ 
     </div>
   </div>
-
+ 
   <div class="scroll-cue"><div class="wheel"></div>SCROLL</div>
-
+ 
 </section>
-
+ 
 <!--================ ABOUT ================-->
 <section class="about" id="about">
-
+ 
   <div class="about-img reveal">
     <div class="about-frame">
       <img src="adarsh.jpeg" alt="Adarsh Gadekar" onerror="this.remove()">
       <span class="avatar-fallback">AG</span>
     </div>
   </div>
-
+ 
   <div class="about-content reveal">
-    <span class="tag">01 · ABOUT ME</span>
     <h2 class="heading" style="text-align:left;margin-bottom:1.5rem;">About <span>Me</span></h2>
     <h3>Java Full Stack Developer</h3>
     <p>
@@ -104,37 +106,77 @@
     </p>
     <a href="#contact" class="btn">Let's Connect</a>
   </div>
-
+ 
 </section>
-
+ 
 <!--================ SKILLS ================-->
 <section class="skills" id="skills">
-
-  <span class="tag center reveal">02 · CAPABILITIES</span>
+ 
   <h2 class="heading reveal">My <span>Skills</span></h2>
-
-  <div class="skills-container">
-    <div class="skill-card reveal"><i class='bx bxl-html5'></i><h3>HTML5</h3></div>
-    <div class="skill-card reveal"><i class='bx bxl-css3'></i><h3>CSS3</h3></div>
-    <div class="skill-card reveal"><i class='bx bxl-javascript'></i><h3>JavaScript</h3></div>
-    <div class="skill-card reveal java"><i class='bx bxl-java'></i><h3>Java</h3></div>
-    <div class="skill-card reveal"><i class='bx bxl-react'></i><h3>React</h3></div>
-    <div class="skill-card reveal"><i class='bx bx-data'></i><h3>Oracle SQL</h3></div>
-    <div class="skill-card reveal java"><i class='bx bx-server'></i><h3>JDBC</h3></div>
-    <div class="skill-card reveal java"><i class='bx bx-code-curly'></i><h3>Servlets</h3></div>
-    <div class="skill-card reveal java"><i class='bx bx-file'></i><h3>JSP</h3></div>
+ 
+  <div class="skills-wrap">
+ 
+    <!-- FRONTEND -->
+    <div class="skills-category reveal">
+      <h3 class="skills-cat-title"><i class='bx bx-devices'></i> Frontend</h3>
+      <div class="skills-grid">
+        <div class="skill-card"><i class='bx bxl-html5'></i><h4>HTML5</h4></div>
+        <div class="skill-card"><i class='bx bxl-css3'></i><h4>CSS3</h4></div>
+        <div class="skill-card"><i class='bx bxl-javascript'></i><h4>JavaScript</h4></div>
+        <div class="skill-card"><i class='bx bxl-react'></i><h4>React</h4></div>
+        <div class="skill-card"><i class='bx bxl-bootstrap'></i><h4>Bootstrap</h4></div>
+      </div>
+    </div>
+ 
+    <!-- BACKEND -->
+    <div class="skills-category reveal">
+      <h3 class="skills-cat-title java"><i class='bx bx-server'></i> Backend</h3>
+      <div class="skills-grid">
+        <div class="skill-card java"><i class='bx bxl-java'></i><h4>Java</h4></div>
+        <div class="skill-card java"><i class='bx bx-code-curly'></i><h4>Servlets</h4></div>
+        <div class="skill-card java"><i class='bx bx-file'></i><h4>JSP</h4></div>
+        <div class="skill-card java"><i class='bx bx-plug'></i><h4>JDBC</h4></div>
+        <div class="skill-card java"><i class='bx bx-data'></i><h4>Oracle SQL</h4></div>
+        <div class="skill-card java"><i class='bx bxl-postgresql'></i><h4>MySQL</h4></div>
+      </div>
+    </div>
+ 
+    <!-- FRAMEWORKS & LIBRARIES -->
+    <div class="skills-category reveal">
+      <h3 class="skills-cat-title java"><i class='bx bx-layer'></i> Frameworks &amp; Libraries</h3>
+      <div class="skills-grid">
+        <div class="skill-card java"><i class='bx bx-leaf'></i><h4>Spring </h4></div>
+        <div class="skill-card java"><i class='bx bx-leaf'></i><h4>Spring Boot</h4></div>
+        <div class="skill-card java"><i class='bx bx-link'></i><h4>Hibernate</h4></div>
+        <div class="skill-card java"><i class='bx bx-transfer-alt'></i><h4>REST APIs</h4></div>
+        <div class="skill-card java"><i class='bx bx-check-shield'></i><h4>JUnit</h4></div>
+      </div>
+    </div>
+ 
+    <!-- TOOLS & PLATFORMS -->
+    <div class="skills-category reveal">
+      <h3 class="skills-cat-title"><i class='bx bx-wrench'></i> Tools &amp; Platforms</h3>
+      <div class="skills-grid">
+        <div class="skill-card"><i class='bx bxl-git'></i><h4>Git &amp; GitHub</h4></div>
+        <div class="skill-card"><i class='bx bx-package'></i><h4>Maven</h4></div>
+        <div class="skill-card"><i class='bx bx-code-alt'></i><h4>Eclipse / IntelliJ</h4></div>
+        <div class="skill-card"><i class='bx bx-send'></i><h4>Postman</h4></div>
+        <div class="skill-card"><i class='bx bx-cloud'></i><h4>Apache Tomcat</h4></div>
+        <div class="skill-card"><i class='bx bxl-visual-studio'></i><h4>VS Code</h4></div>
+      </div>
+    </div>
+ 
   </div>
-
+ 
 </section>
-
+ 
 <!--================ PROJECTS ================-->
 <section class="projects" id="projects">
-
-  <span class="tag center reveal">03 · SELECTED WORK</span>
+ 
   <h2 class="heading reveal">Latest <span>Projects</span></h2>
-
+ 
   <div class="project-container">
-
+ 
     <div class="project-box reveal tilt-card">
       <div class="card-glow"></div>
       <div class="project-thumb thumb-1">
@@ -150,7 +192,7 @@
 </a>
       </div>
     </div>
-
+ 
     <div class="project-box reveal tilt-card">
       <div class="card-glow"></div>
       <div class="project-thumb thumb-2">
@@ -181,7 +223,7 @@
       </div>
       
     </div>
-
+ 
     <div class="project-box reveal tilt-card">
       <div class="card-glow"></div>
       <div class="project-thumb thumb-3">
@@ -196,78 +238,76 @@
 </a>
       </div>
     </div>
-
+ 
   </div>
-
+ 
 </section>
-
+ 
 <!--================ EDUCATION ================-->
 <section class="education" id="education">
-
-  <span class="tag center reveal">04 · EDUCATION</span>
+ 
   <h2 class="heading reveal">My <span>Education</span></h2>
-
+ 
   <div class="timeline">
-
+ 
     <div class="timeline-line"></div>
-
+ 
     <div class="timeline-item reveal">
       <h3>B.Tech Computer Science Engineering</h3>
       <span>2022 – 2026</span>
       <p>Bharat Ratna Indira Gandhi College of Engineering</p>
     </div>
-
+ 
     <div class="timeline-item reveal">
       <h3>Higher Secondary (12th)</h3>
       <span>MSBSHSE</span>
       <p> C.B.Khedgi College of Arts & Commerce</p>
     </div>
-
+ 
     <div class="timeline-item reveal">
       <h3>Secondary (10th)</h3>
       <span>MSBSHSE</span>
       <p>Shree Shardamata English Medium High School</p>
     </div>
-
+ 
   </div>
-
+ 
 </section>
-
+ 
 <!--================ CONTACT ================-->
 <section class="contact" id="contact">
-
-  <span class="tag center reveal">05 · GET IN TOUCH</span>
+ 
   <h2 class="heading reveal">Contact <span>Me</span></h2>
-
+ 
   <form class="reveal" id="contact-form">
-
+ 
     <div class="input-box">
       <div class="field"><input type="text" name="name" placeholder=" " required><label>Full Name</label></div>
       <div class="field"><input type="email" name="email" placeholder=" " required><label>Email Address</label></div>
     </div>
-
+ 
     <div class="input-box">
       <div class="field"><input type="text" name="phone" placeholder=" "><label>Mobile Number</label></div>
       <div class="field"><input type="text" name="subject" placeholder=" "><label>Subject</label></div>
     </div>
-
+ 
     <div class="field">
       <textarea cols="30" rows="6" name="message" placeholder=" " required></textarea>
       <label>Your Message</label>
     </div>
-
+ 
     <input type="submit" value="Send Message" class="btn" id="submit-btn">
     <p class="form-status" id="form-status"></p>
-
+ 
   </form>
-
+ 
 </section>
-
+ 
 <!--================ FOOTER ================-->
 <footer class="footer">
-
+ 
     <div class="footer-container">
-
+ 
         <div class="footer-box">
             <h3>Navigation</h3>
             <a href="#home">Home</a>
@@ -277,15 +317,15 @@
             <a href="#projects">Projects</a>
             <a href="#contact">Contact</a>
         </div>
-
+ 
         <div class="footer-box">
             <h3>Projects</h3>
-            <a href="#">Hospital Management</a>
-            <a href="#">Employee Portal</a>
-            <a href="#">Portfolio Website</a>
-            <a href="#">Task Manager</a>
+            <a href="#projects">Hospital Management</a>
+            <a href="#projects">Employee Portal</a>
+            <a href="#projects">Portfolio Website</a>
+            <a href="#projects">Task Manager</a>
         </div>
-
+ 
         <div class="footer-box">
             <h3>Contact</h3>
             <a href="mailto:yourmail@gmail.com">Email</a>
@@ -293,7 +333,7 @@
             <a href="#">GitHub</a>
             <a href="#">Instagram</a>
         </div>
-
+ 
         <div class="footer-box">
             <h3>Legal</h3>
             <a href="#">Privacy Policy</a>
@@ -301,22 +341,30 @@
             <a href="#">Cookies</a>
             <a href="#">Disclaimer</a>
         </div>
-
+ 
     </div>
-
+ 
     <div class="footer-bottom">
         <p>&copy; 2026 Adarsh Gadekar | All Rights Reserved.</p>
-
+ 
         <a href="#home" class="top-btn">
             <i class='bx bx-up-arrow-alt'></i>
         </a>
     </div>
-
+ 
 </footer>
-
+ 
+<div class="project-modal" id="projectModal">
+  <div class="modal-box">
+    <span class="close-btn">&times;</span>
+    <div id="projectContent"></div>
+  </div>
+</div>
+ 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 <script src="script.js"></script>
 </body>
 </html>
+ 
