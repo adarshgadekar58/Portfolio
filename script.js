@@ -308,7 +308,7 @@ if (avatarBox) {
 (function buildOrbit(){
     const layer = document.querySelector("#orbit-layer");
     if (!layer) return;
-    const icons = ["bxl-html5", "bxl-css3", "bxl-javascript", "bxl-java", "bxl-react", "bx-data"];
+    const icons = ["bxl-html5", "bxl-css3", "bxl-javascript", "bxl-java", "bxl-react", "bx-leaf"];
     const count = icons.length;
     const radius = 210;
     icons.forEach((icon, i) => {
@@ -487,218 +487,137 @@ if (avatarBox) {
             submitBtn.disabled = false;
         }
     });
+})();
+
+/*=========================================
+        PROJECT MODAL
+        (kept in global scope so the inline
+        onclick="openProject(...)" handlers
+        in index.html can reach it)
+=========================================*/
+(function projectModal(){
     const modal = document.getElementById("projectModal");
-const content = document.getElementById("projectContent");
+    const content = document.getElementById("projectContent");
+    if (!modal || !content) return;
 
-function openProject(type){
+    window.openProject = function (type) {
 
-if(type==="student"){
-
-content.innerHTML=`
-
+        if (type === "student") {
+            content.innerHTML = `
 <h2>Student Management System</h2>
-
 <p>
 A Java Full Stack web application developed using the MVC architecture to
 manage student records efficiently. The application enables administrators
 to perform complete CRUD operations while maintaining secure database
 connectivity.
 </p>
-
 <h3>Key Features</h3>
-
 <ul>
-
 <li>Student Registration</li>
-
 <li>Admin Login</li>
-
 <li>Add Student</li>
-
 <li>Update Student</li>
-
 <li>Delete Student</li>
-
 <li>Search Student</li>
-
 <li>Responsive Dashboard</li>
-
 </ul>
-
 <h3>Technology Stack</h3>
-
 <div class="tech">
-
 <span>Java</span>
-
 <span>Advanced Java</span>
-
 <span>Servlet</span>
-
 <span>JSP</span>
-
 <span>JDBC</span>
-
 <span>MVC</span>
-
 <span>Oracle SQL</span>
-
 <span>HTML5</span>
-
 <span>CSS3</span>
-
 <span>JavaScript</span>
-
 </div>
-
 <h3>Development Tools</h3>
-
 <ul>
-
 <li>Eclipse IDE</li>
-
 <li>Apache Tomcat</li>
-
 <li>Oracle Database</li>
-
 <li>GitHub</li>
-
 </ul>
-
 <h3>Recruiter Summary</h3>
-
 <p>
-
 This project demonstrates strong knowledge of Java Web Development,
 MVC Architecture, JDBC connectivity, Oracle Database integration,
 CRUD operations, session management, responsive UI development,
 and clean project organization. It reflects the practical skills
 required for an entry-level Java Full Stack Developer role.
-
 </p>
-
 `;
+        }
 
-}
-
-else if(type==="hospital"){
-
-content.innerHTML=`
-
+        else if (type === "hospital") {
+            content.innerHTML = `
 <h2>Hospital Management System</h2>
-
 <p>
-
 A Java-based Hospital Management System developed to simplify
 patient registration, appointment booking, and medical record
 management.
-
 </p>
-
 <h3>Technology Used</h3>
-
 <div class="tech">
-
 <span>Java</span>
-
 <span>Servlet</span>
-
 <span>JSP</span>
-
 <span>JDBC</span>
-
 <span>Oracle SQL</span>
-
 <span>Bootstrap</span>
-
 </div>
-
 <h3>Features</h3>
-
 <ul>
-
 <li>Patient Registration</li>
-
 <li>Patient Login</li>
-
 <li>Appointment Booking</li>
-
 <li>Doctor Dashboard</li>
-
 <li>Admin Panel</li>
-
 <li>Patient History</li>
-
 </ul>
-
 `;
+        }
 
-}
-
-else{
-
-content.innerHTML=`
-
+        else {
+            content.innerHTML = `
 <h2>Portfolio Website</h2>
-
 <p>
-
 A premium responsive developer portfolio showcasing technical
 skills, education, projects, resume, and contact information.
-
 </p>
-
 <h3>Technology Used</h3>
-
 <div class="tech">
-
 <span>HTML5</span>
-
 <span>CSS3</span>
-
 <span>JavaScript</span>
-
 <span>GSAP</span>
-
 <span>Three.js</span>
-
 </div>
-
 <h3>Highlights</h3>
-
 <ul>
-
 <li>Responsive Design</li>
-
 <li>3D Animations</li>
-
 <li>Glassmorphism UI</li>
-
 <li>Interactive Project Cards</li>
-
 <li>Premium Portfolio Layout</li>
-
 </ul>
-
 `;
+        }
 
-}
+        modal.style.display = "flex";
+    };
 
-modal.style.display="flex";
+    const closeBtn = document.querySelector(".close-btn");
+    if (closeBtn) {
+        closeBtn.onclick = function () {
+            modal.style.display = "none";
+        };
+    }
 
-}
-
-document.querySelector(".close-btn").onclick=function(){
-
-modal.style.display="none";
-
-}
-
-window.onclick=function(e){
-
-if(e.target==modal)
-
-modal.style.display="none";
-
-}
+    window.addEventListener("click", function (e) {
+        if (e.target === modal) modal.style.display = "none";
+    });
 })();
