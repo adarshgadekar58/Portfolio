@@ -1,31 +1,34 @@
-
-
-Index · HTML
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Adarsh Gadekar | Java Full Stack Developer</title>
- 
+<meta name="description" content="Adarsh Gadekar - Java Full Stack Developer skilled in Java, Spring Boot, Hibernate, JDBC, Servlets, JSP, Oracle SQL and React.">
+<meta name="theme-color" content="#050b14">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%23050b14'/%3E%3Ctext x='50' y='66' font-size='52' font-family='Arial' font-weight='700' text-anchor='middle' fill='%2300c2ff'%3EAG%3C/text%3E%3C/svg%3E">
+
 <link rel="stylesheet" href="style.css">
-<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+<link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700;800&family=Poppins:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<noscript><style>.reveal{opacity:1!important;transform:none!important}.loader{display:none!important}</style></noscript>
 </head>
 <body>
- 
+
 <div class="loader"><span></span></div>
 <div class="scroll-progress"></div>
- 
+
 <canvas id="bg-canvas"></canvas>
 <div class="cursor-dot"></div>
 <div class="cursor-ring"></div>
- 
+
 <!--================ HEADER ================-->
 <header class="header">
   <a href="#home" class="logo">Adarsh<span>.</span></a>
-  <i class='bx bx-menu' id="menu-icon"></i>
-  <nav class="navbar">
+  <button class="menu-btn" id="menu-icon" aria-label="Open menu"><i class='bx bx-menu'></i></button>
+  <nav class="navbar" aria-label="Main">
     <a href="#home" class="active">Home</a>
     <a href="#about">About</a>
     <a href="#skills">Skills</a>
@@ -34,337 +37,387 @@ Index · HTML
     <a href="#contact">Contact</a>
   </nav>
 </header>
- 
+
 <!--================ HOME ================-->
 <section class="home" id="home">
- 
+
   <div class="home-content">
-    <span class="eyebrow reveal"><i class='bx bx-code-alt'></i> AVAILABLE FOR OPPORTUNITIES</span>
+    <span class="eyebrow reveal"><i class="live-dot"></i> Open to Java Full-Stack roles</span>
     <h3 class="reveal">Hello, I'm</h3>
     <h1 class="reveal">Adarsh Gadekar</h1>
     <h3 class="role-line reveal">I'm a <span class="multiple-text"></span><span class="cursor-blink">|</span></h3>
     <p class="reveal">
-      Passionate Java Full Stack Developer focused on creating responsive
-      websites and scalable web applications using Java, HTML, CSS,
-      JavaScript, Oracle SQL, JDBC, Servlets, JSP, and React.
+      I build responsive websites and scalable web applications with Java,
+      Spring Boot, Hibernate, JDBC, Servlets, JSP, Oracle SQL and React.
     </p>
- 
+
     <div class="social-media reveal">
-      <a href="#" class="github" aria-label="GitHub"><i class='bx bxl-github'></i></a>
-      <a href="#" class="linkedin" aria-label="LinkedIn"><i class='bx bxl-linkedin'></i></a>
-      <a href="#" class="instagram" aria-label="Instagram"><i class='bx bxl-instagram'></i></a>
-      <a href="#" class="twitter" aria-label="Twitter"><i class='bx bxl-twitter'></i></a>
+      <a href="#" data-social="github" class="github" aria-label="GitHub" target="_blank" rel="noopener"><i class='bx bxl-github'></i></a>
+      <a href="#" data-social="linkedin" class="linkedin" aria-label="LinkedIn" target="_blank" rel="noopener"><i class='bx bxl-linkedin'></i></a>
+      <a href="https://wa.me/919673559349" class="whatsapp" aria-label="WhatsApp" target="_blank" rel="noopener"><i class='bx bxl-whatsapp'></i></a>
+      <a href="mailto:adarshgadekar58@gmail.com" class="mail" aria-label="Email"><i class='bx bx-envelope'></i></a>
     </div>
- 
+
     <div class="buttons reveal">
-      <a href="Adarsh_Gadekar_Resume_Updated.docx" class="btn" download>Download Resume</a>
-      <a href="#contact" class="btn btn2">Hire Me</a>
+      <a href="Adarsh_Gadekar_Resume4.pdf" class="btn" download>Download resume</a>
+      <a href="#contact" class="btn btn2">Hire me</a>
     </div>
   </div>
- 
+
   <div class="home-img">
-    <div class="orbit-stage">
- 
-      <div class="orbit-ring ring-1"></div>
-      <div class="orbit-ring ring-2"></div>
- 
-      <div class="orbit-layer" id="orbit-layer"></div>
- 
-      <div class="image-box-wrap">
-        <div class="image-box" id="avatar-box">
-          <img src="adarsh.jpeg" alt="Adarsh Gadekar" onerror="this.remove()">
+    <!-- 3D orbit: a tilted ring of real tech logos turns around a fixed photo -->
+    <div class="orbit-stage" id="orbit-stage">
+      <div class="ring ring-outer"></div>
+      <div class="ring ring-inner"></div>
+
+      <div class="orbit-plane">
+        <div class="orbit-spin">
+          <div class="orbit-arm" style="--a:0deg"><div class="orbit-chip"><div class="orbit-chip-in"><img data-icon="html5" src="assets/icons/html5.svg" alt="HTML5"></div></div></div>
+          <div class="orbit-arm" style="--a:45deg"><div class="orbit-chip"><div class="orbit-chip-in"><img data-icon="css3" src="assets/icons/css3.svg" alt="CSS3"></div></div></div>
+          <div class="orbit-arm" style="--a:90deg"><div class="orbit-chip"><div class="orbit-chip-in"><img data-icon="javascript" src="assets/icons/javascript.svg" alt="JavaScript"></div></div></div>
+          <div class="orbit-arm" style="--a:135deg"><div class="orbit-chip"><div class="orbit-chip-in"><img data-icon="react" src="assets/icons/react.svg" alt="React"></div></div></div>
+          <div class="orbit-arm" style="--a:180deg"><div class="orbit-chip"><div class="orbit-chip-in"><img data-icon="java" src="assets/icons/java.svg" alt="Java"></div></div></div>
+          <div class="orbit-arm" style="--a:225deg"><div class="orbit-chip"><div class="orbit-chip-in"><img data-icon="springboot" src="assets/icons/springboot.svg" alt="Spring Boot"></div></div></div>
+          <div class="orbit-arm" style="--a:270deg"><div class="orbit-chip"><div class="orbit-chip-in"><img data-icon="mysql" src="assets/icons/mysql.svg" alt="MySQL"></div></div></div>
+          <div class="orbit-arm" style="--a:315deg"><div class="orbit-chip"><div class="orbit-chip-in"><img data-icon="git" src="assets/icons/git.svg" alt="Git"></div></div></div>
+        </div>
+      </div>
+
+      <div class="avatar" id="avatar">
+        <div class="avatar-ring">
+          <img src="WhatsApp Image 2026-09-19 at 8.35.35 PM.jpeg" alt="Adarsh Gadekar" onerror="this.remove()">
           <span class="avatar-fallback">AG</span>
         </div>
       </div>
- 
     </div>
   </div>
- 
-  <div class="scroll-cue"><div class="wheel"></div>SCROLL</div>
- 
+
+  <div class="scroll-cue"><div class="wheel"></div>Scroll</div>
+
 </section>
- 
+
+<!--================ STATS ================-->
+<div class="stats" aria-label="Highlights from my projects">
+  <div class="stat reveal"><b data-count="3" data-suffix="+">0</b><span>Full-stack projects built</span></div>
+  <div class="stat reveal"><b data-count="250" data-suffix="+">0</b><span>Employee records handled</span></div>
+  <div class="stat reveal"><b data-count="30" data-suffix="%">0</b><span>Faster data retrieval</span></div>
+  <div class="stat reveal"><b data-count="10" data-suffix="+">0</b><span>SQL queries optimised</span></div>
+</div>
+
 <!--================ ABOUT ================-->
 <section class="about" id="about">
- 
+
   <div class="about-img reveal">
-    <div class="about-frame">
-      <img src="adarsh.jpeg" alt="Adarsh Gadekar" onerror="this.remove()">
+    <div class="about-frame" data-tilt="8">
+      <img src="WhatsApp Image 2026-09-19 at 8.35.35 PM.jpeg" alt="Adarsh Gadekar" onerror="this.remove()">
       <span class="avatar-fallback">AG</span>
     </div>
   </div>
- 
+
   <div class="about-content reveal">
-    <h2 class="heading" style="text-align:left;margin-bottom:1.5rem;">About <span>Me</span></h2>
+    <h2 class="heading left">About <span>me</span></h2>
     <h3>Java Full Stack Developer</h3>
     <p>
-      I am a Computer Science Engineering student passionate about Full
-      Stack Java Development. I enjoy building responsive websites,
-      backend applications, and database-driven systems. My goal is to
-      become a Software Engineer and continuously improve my development
-      skills.
+      I'm a Computer Science Engineering graduate who enjoys building
+      responsive front ends, backend applications and database-driven
+      systems. I have hands-on project experience with Java, Spring Boot,
+      Spring Data JPA, Hibernate, JDBC, Servlets, JSP, SQL and React, and I
+      follow SDLC and MVC practices.
     </p>
-    <a href="#contact" class="btn">Let's Connect</a>
+    <p>
+      I completed project-based Java Full-Stack training at NareshIT in
+      May 2026. My goal is to grow into a Software Engineer who ships
+      clean, maintainable code.
+    </p>
+    <ul class="about-facts">
+      <li><i class='bx bx-map'></i> Solapur, Maharashtra, India</li>
+      <li><i class='bx bx-graduation'></i> B.Tech CSE, 2022 - 2026</li>
+      <li><i class='bx bx-envelope'></i> adarshgadekar58@gmail.com</li>
+    </ul>
+    <a href="#contact" class="btn">Let's connect</a>
   </div>
- 
+
 </section>
- 
+
 <!--================ SKILLS ================-->
 <section class="skills" id="skills">
- 
-  <h2 class="heading reveal">My <span>Skills</span></h2>
- 
+
+  <h2 class="heading reveal">My <span>skills</span></h2>
+
   <div class="skills-wrap">
- 
-    <!-- FRONTEND -->
+
     <div class="skills-category reveal">
       <h3 class="skills-cat-title"><i class='bx bx-devices'></i> Frontend</h3>
       <div class="skills-grid">
-        <div class="skill-card"><i class='bx bxl-html5'></i><h4>HTML5</h4></div>
-        <div class="skill-card"><i class='bx bxl-css3'></i><h4>CSS3</h4></div>
-        <div class="skill-card"><i class='bx bxl-javascript'></i><h4>JavaScript</h4></div>
-        <div class="skill-card"><i class='bx bxl-react'></i><h4>React</h4></div>
-        <div class="skill-card"><i class='bx bxl-bootstrap'></i><h4>Bootstrap</h4></div>
+        <div class="skill-card" data-tilt="12"><span class="logo-tile"><img data-icon="html5" src="assets/icons/html5.svg" alt="" loading="lazy"></span><h4>HTML5</h4></div>
+        <div class="skill-card" data-tilt="12"><span class="logo-tile"><img data-icon="css3" src="assets/icons/css3.svg" alt="" loading="lazy"></span><h4>CSS3</h4></div>
+        <div class="skill-card" data-tilt="12"><span class="logo-tile"><img data-icon="javascript" src="assets/icons/javascript.svg" alt="" loading="lazy"></span><h4>JavaScript</h4></div>
+        <div class="skill-card" data-tilt="12"><span class="logo-tile"><img data-icon="react" src="assets/icons/react.svg" alt="" loading="lazy"></span><h4>React</h4></div>
+        <div class="skill-card" data-tilt="12"><span class="logo-tile"><img data-icon="bootstrap" src="assets/icons/bootstrap.svg" alt="" loading="lazy"></span><h4>Bootstrap</h4></div>
       </div>
     </div>
- 
-    <!-- BACKEND -->
+
     <div class="skills-category reveal">
-      <h3 class="skills-cat-title java"><i class='bx bx-server'></i> Backend</h3>
+      <h3 class="skills-cat-title java"><i class='bx bx-server'></i> Backend &amp; frameworks</h3>
       <div class="skills-grid">
-        <div class="skill-card java"><i class='bx bxl-java'></i><h4>Java</h4></div>
-        <div class="skill-card java"><i class='bx bx-code-curly'></i><h4>Servlets</h4></div>
-        <div class="skill-card java"><i class='bx bx-file'></i><h4>JSP</h4></div>
-        <div class="skill-card java"><i class='bx bx-plug'></i><h4>JDBC</h4></div>
-        <div class="skill-card java"><i class='bx bx-data'></i><h4>Oracle SQL</h4></div>
-        <div class="skill-card java"><i class='bx bxl-postgresql'></i><h4>MySQL</h4></div>
+        <div class="skill-card java" data-tilt="12"><span class="logo-tile"><img data-icon="java" src="assets/icons/java.svg" alt="" loading="lazy"></span><h4>Java</h4></div>
+        <div class="skill-card java" data-tilt="12"><span class="logo-tile"><img data-icon="spring" src="assets/icons/spring.svg" alt="" loading="lazy"></span><h4>Spring</h4></div>
+        <div class="skill-card java" data-tilt="12"><span class="logo-tile"><img data-icon="springboot" src="assets/icons/springboot.svg" alt="" loading="lazy"></span><h4>Spring Boot</h4></div>
+        <div class="skill-card java" data-tilt="12"><span class="logo-tile"><img data-icon="hibernate" src="assets/icons/hibernate.svg" alt="" loading="lazy"></span><h4>Hibernate</h4></div>
+        <div class="skill-card java" data-tilt="12"><span class="logo-tile"><img data-icon="spring" src="assets/icons/spring.svg" alt="" loading="lazy"></span><h4>Spring Data JPA</h4></div>
+        <div class="skill-card java" data-tilt="12"><span class="logo-tile"><img data-icon="tomcat" src="assets/icons/tomcat.svg" alt="" loading="lazy"></span><h4>Servlets &amp; JSP</h4></div>
+        <div class="skill-card java" data-tilt="12"><span class="logo-tile"><img data-icon="java" src="assets/icons/java.svg" alt="" loading="lazy"></span><h4>JDBC</h4></div>
+        <div class="skill-card java" data-tilt="12"><span class="logo-tile"><img data-icon="rest" src="assets/icons/rest.svg" alt="" loading="lazy"></span><h4>REST APIs</h4></div>
+        <div class="skill-card java" data-tilt="12"><span class="logo-tile"><img data-icon="junit" src="assets/icons/junit.svg" alt="" loading="lazy"></span><h4>JUnit</h4></div>
       </div>
     </div>
- 
-    <!-- FRAMEWORKS & LIBRARIES -->
+
     <div class="skills-category reveal">
-      <h3 class="skills-cat-title java"><i class='bx bx-layer'></i> Frameworks &amp; Libraries</h3>
+      <h3 class="skills-cat-title"><i class='bx bx-data'></i> Database</h3>
       <div class="skills-grid">
-        <div class="skill-card java"><i class='bx bx-leaf'></i><h4>Spring </h4></div>
-        <div class="skill-card java"><i class='bx bx-leaf'></i><h4>Spring Boot</h4></div>
-        <div class="skill-card java"><i class='bx bx-link'></i><h4>Hibernate</h4></div>
-        <div class="skill-card java"><i class='bx bx-transfer-alt'></i><h4>REST APIs</h4></div>
-        <div class="skill-card java"><i class='bx bx-check-shield'></i><h4>JUnit</h4></div>
+        <div class="skill-card" data-tilt="12"><span class="logo-tile"><img data-icon="oracle" src="assets/icons/oracle.svg" alt="" loading="lazy"></span><h4>Oracle SQL &amp; PL/SQL</h4></div>
+        <div class="skill-card" data-tilt="12"><span class="logo-tile"><img data-icon="mysql" src="assets/icons/mysql.svg" alt="" loading="lazy"></span><h4>MySQL</h4></div>
       </div>
     </div>
- 
-    <!-- TOOLS & PLATFORMS -->
+
     <div class="skills-category reveal">
-      <h3 class="skills-cat-title"><i class='bx bx-wrench'></i> Tools &amp; Platforms</h3>
+      <h3 class="skills-cat-title java"><i class='bx bx-wrench'></i> Tools &amp; cloud</h3>
       <div class="skills-grid">
-        <div class="skill-card"><i class='bx bxl-git'></i><h4>Git &amp; GitHub</h4></div>
-        <div class="skill-card"><i class='bx bx-package'></i><h4>Maven</h4></div>
-        <div class="skill-card"><i class='bx bx-code-alt'></i><h4>Eclipse / IntelliJ</h4></div>
-        <div class="skill-card"><i class='bx bx-send'></i><h4>Postman</h4></div>
-        <div class="skill-card"><i class='bx bx-cloud'></i><h4>Apache Tomcat</h4></div>
-        <div class="skill-card"><i class='bx bxl-visual-studio'></i><h4>VS Code</h4></div>
+        <div class="skill-card java" data-tilt="12"><span class="logo-tile light"><img data-icon="git" src="assets/icons/git.svg" alt="" loading="lazy"></span><h4>Git</h4></div>
+        <div class="skill-card java" data-tilt="12"><span class="logo-tile light"><img data-icon="github" src="assets/icons/github.svg" alt="" loading="lazy"></span><h4>GitHub</h4></div>
+        <div class="skill-card java" data-tilt="12"><span class="logo-tile light"><img data-icon="maven" src="assets/icons/maven.svg" alt="" loading="lazy"></span><h4>Maven</h4></div>
+        <div class="skill-card java" data-tilt="12"><span class="logo-tile light"><img data-icon="gradle" src="assets/icons/gradle.svg" alt="" loading="lazy"></span><h4>Gradle</h4></div>
+        <div class="skill-card java" data-tilt="12"><span class="logo-tile light"><img data-icon="eclipse" src="assets/icons/eclipse.svg" alt="" loading="lazy"></span><h4>Eclipse</h4></div>
+        <div class="skill-card java" data-tilt="12"><span class="logo-tile light"><img data-icon="intellij" src="assets/icons/intellij.svg" alt="" loading="lazy"></span><h4>IntelliJ IDEA</h4></div>
+        <div class="skill-card java" data-tilt="12"><span class="logo-tile light"><img data-icon="vscode" src="assets/icons/vscode.svg" alt="" loading="lazy"></span><h4>VS Code</h4></div>
+        <div class="skill-card java" data-tilt="12"><span class="logo-tile light"><img data-icon="postman" src="assets/icons/postman.svg" alt="" loading="lazy"></span><h4>Postman</h4></div>
+        <div class="skill-card java" data-tilt="12"><span class="logo-tile light"><img data-icon="tomcat" src="assets/icons/tomcat.svg" alt="" loading="lazy"></span><h4>Apache Tomcat</h4></div>
+        <div class="skill-card java" data-tilt="12"><span class="logo-tile light"><img data-icon="aws" src="assets/icons/aws.svg" alt="" loading="lazy"></span><h4>AWS</h4></div>
       </div>
     </div>
- 
+
   </div>
- 
 </section>
- 
+
 <!--================ PROJECTS ================-->
 <section class="projects" id="projects">
- 
-  <h2 class="heading reveal">Latest <span>Projects</span></h2>
- 
+
+  <h2 class="heading reveal">Latest <span>projects</span></h2>
+  <p class="section-note reveal">Select a project to see what I built and the tech behind it.</p>
+
   <div class="project-container">
- 
-    <div class="project-box reveal tilt-card">
+
+    <article class="project-box reveal" data-tilt="9" data-project="student" tabindex="0" role="button" aria-label="Open Student Management Portal details">
       <div class="card-glow"></div>
       <div class="project-thumb thumb-1">
-        <img src="hospital2.png" alt="Hospital Management System" onerror="this.style.display='none'">
-        <img src="hospital3.png" alt="Hospital Management System" onerror="this.style.display='none'">
+        <div class="thumb-logos"><img data-icon="java" src="assets/icons/java.svg" alt=""><img data-icon="oracle" src="assets/icons/oracle.svg" alt=""></div>
+        <img class="shot" src="Screenshot 2026-03-07 153147.png" alt="Student Management Portal screenshot" onerror="this.remove()">
+      </div>
+      <div class="project-layer">
+        <h4>Student Management Portal</h4>
+        <p>Java, Servlets, JSP, JDBC, Oracle SQL</p>
+        <div class="tag-row"><span class="chip">MVC</span><span class="chip">CRUD</span><span class="chip">DAO</span></div>
+        <span class="view-btn">View details <i class='bx bx-right-arrow-alt'></i></span>
+      </div>
+    </article>
+
+    <article class="project-box reveal" data-tilt="9" data-project="food" tabindex="0" role="button" aria-label="Open Food Ordering and Delivery System details">
+      <div class="card-glow"></div>
+      <div class="project-thumb thumb-2">
+        <div class="thumb-logos"><img data-icon="springboot" src="assets/icons/springboot.svg" alt=""><img data-icon="hibernate" src="assets/icons/hibernate.svg" alt=""></div>
+      </div>
+      <div class="project-layer">
+        <h4>Food Ordering &amp; Delivery System</h4>
+        <p>Spring Boot, Spring Data JPA, Hibernate, JSP</p>
+        <div class="tag-row"><span class="chip">Full stack</span><span class="chip">JPA</span><span class="chip">Bootstrap</span></div>
+        <span class="view-btn">View details <i class='bx bx-right-arrow-alt'></i></span>
+      </div>
+    </article>
+
+    <article class="project-box reveal" data-tilt="9" data-project="employee" tabindex="0" role="button" aria-label="Open Employee Lifecycle Management System details">
+      <div class="card-glow"></div>
+      <div class="project-thumb thumb-3">
+        <div class="thumb-logos"><img data-icon="java" src="assets/icons/java.svg" alt=""><img data-icon="oracle" src="assets/icons/oracle.svg" alt=""></div>
+      </div>
+      <div class="project-layer">
+        <h4>Employee Lifecycle Management</h4>
+        <p>Java, JDBC, Oracle SQL</p>
+        <div class="tag-row"><span class="chip">Backend</span><span class="chip">JDBC</span><span class="chip">Oracle SQL</span></div>
+        <span class="view-btn">View details <i class='bx bx-right-arrow-alt'></i></span>
+      </div>
+    </article>
+
+    <article class="project-box reveal" data-tilt="9" data-project="hospital" tabindex="0" role="button" aria-label="Open Hospital Management System details">
+      <div class="card-glow"></div>
+      <div class="project-thumb thumb-1">
+        <div class="thumb-logos"><img data-icon="java" src="assets/icons/java.svg" alt=""><img data-icon="oracle" src="assets/icons/oracle.svg" alt=""></div>
+        <img class="shot" src="hospital2.png" alt="Hospital Management System screenshot" onerror="this.remove()">
       </div>
       <div class="project-layer">
         <h4>Hospital Management System</h4>
         <p>Java, JSP, Servlet, Oracle SQL</p>
         <div class="tag-row"><span class="chip">Java</span><span class="chip">JSP</span><span class="chip">Oracle SQL</span></div>
-        <a href="#" onclick="openProject('hospital'); return false;">
-    <i class='bx bx-link-external'></i>
-</a>
+        <span class="view-btn">View details <i class='bx bx-right-arrow-alt'></i></span>
       </div>
-    </div>
- 
-    <div class="project-box reveal tilt-card">
+    </article>
+
+    <article class="project-box reveal" data-tilt="9" data-project="library" tabindex="0" role="button" aria-label="Open Library Management System details">
       <div class="card-glow"></div>
       <div class="project-thumb thumb-2">
-        <img src="Screenshot 2026-03-07 153147.png" alt="Student Management System" onerror="this.style.display='none'">
-      </div>
-      <div class="project-layer">
-        <h4>Student Management System</h4>
-        <p>Java MVC Project</p>
-        <div class="tag-row"><span class="chip">Java</span><span class="chip">MVC</span><span class="chip">JDBC</span></div>
-        <a href="#" onclick="openProject('student'); return false;">
-    <i class='bx bx-link-external'></i>
-</a>
-      </div>
-      
-    </div>
-    <div class="project-box reveal tilt-card">
-      <div class="card-glow"></div>
-      <div class="project-thumb thumb-2">
-        <img src="Screenshot 2026-07-22 142617.png" alt="Student Management System" onerror="this.style.display='none'">
+        <div class="thumb-logos"><img data-icon="java" src="assets/icons/java.svg" alt=""><img data-icon="oracle" src="assets/icons/oracle.svg" alt=""></div>
+        <img class="shot" src="Screenshot 2026-07-22 142617.png" alt="Library Management System screenshot" onerror="this.remove()">
       </div>
       <div class="project-layer">
         <h4>Library Management System</h4>
-        <p>Java MVC Project</p>
+        <p>Java MVC project</p>
         <div class="tag-row"><span class="chip">Java</span><span class="chip">MVC</span><span class="chip">JDBC</span></div>
-        <a href="#" onclick="openProject('student'); return false;">
-    <i class='bx bx-link-external'></i>
-</a>
+        <span class="view-btn">View details <i class='bx bx-right-arrow-alt'></i></span>
       </div>
-      
-    </div>
- 
-    <div class="project-box reveal tilt-card">
+    </article>
+
+    <article class="project-box reveal" data-tilt="9" data-project="portfolio" tabindex="0" role="button" aria-label="Open Portfolio Website details">
       <div class="card-glow"></div>
       <div class="project-thumb thumb-3">
-        <img src="Screenshot 2026-07-09 221037.png" alt="Portfolio Website" onerror="this.style.display='none'">
+        <div class="thumb-logos"><img data-icon="html5" src="assets/icons/html5.svg" alt=""><img data-icon="javascript" src="assets/icons/javascript.svg" alt=""></div>
+        <img class="shot" src="Screenshot 2026-07-09 221037.png" alt="Portfolio website screenshot" onerror="this.remove()">
       </div>
       <div class="project-layer">
         <h4>Portfolio Website</h4>
-        <p>HTML, CSS, JavaScript</p>
+        <p>HTML, CSS, JavaScript, GSAP, Three.js</p>
         <div class="tag-row"><span class="chip">HTML</span><span class="chip">CSS</span><span class="chip">JavaScript</span></div>
-        <a href="#" onclick="openProject('portfolio'); return false;">
-    <i class='bx bx-link-external'></i>
-</a>
+        <span class="view-btn">View details <i class='bx bx-right-arrow-alt'></i></span>
       </div>
-    </div>
- 
+    </article>
+
   </div>
- 
 </section>
- 
+
 <!--================ EDUCATION ================-->
 <section class="education" id="education">
- 
-  <h2 class="heading reveal">My <span>Education</span></h2>
- 
+
+  <h2 class="heading reveal">My <span>education</span></h2>
+
   <div class="timeline">
- 
     <div class="timeline-line"></div>
- 
+
     <div class="timeline-item reveal">
-      <h3>B.Tech Computer Science Engineering</h3>
-      <span>2022 – 2026</span>
-      <p>Bharat Ratna Indira Gandhi College of Engineering</p>
+      <h3>Java Full-Stack Development Training</h3>
+      <span>NareshIT Technologies, May 2026</span>
+      <p>Project-based training in Core Java, JDBC, Servlets, JSP, Spring Boot, Spring Data JPA, Hibernate, SQL, HTML, CSS, JavaScript and Bootstrap.</p>
     </div>
- 
+
+    <div class="timeline-item reveal">
+      <h3>B.Tech, Computer Science &amp; Engineering</h3>
+      <span>2022 - 2026</span>
+      <p>Bharat Ratna Indira Gandhi College of Engineering, Solapur</p>
+    </div>
+
     <div class="timeline-item reveal">
       <h3>Higher Secondary (12th)</h3>
-      <span>MSBSHSE</span>
-      <p> C.B.Khedgi College of Arts & Commerce</p>
+      <span>MSBSHSE, 2021, 72.17%</span>
+      <p>C. B. Khedgi's College of Arts &amp; Commerce, Akkalkot, Solapur</p>
     </div>
- 
+
     <div class="timeline-item reveal">
       <h3>Secondary (10th)</h3>
-      <span>MSBSHSE</span>
-      <p>Shree Shardamata English Medium High School</p>
+      <span>MSBSHSE, 2019, 73.40%</span>
+      <p>Shree Shardamata English Medium High School, Akkalkot</p>
     </div>
- 
   </div>
- 
+
 </section>
- 
+
 <!--================ CONTACT ================-->
 <section class="contact" id="contact">
- 
-  <h2 class="heading reveal">Contact <span>Me</span></h2>
- 
-  <form class="reveal" id="contact-form">
- 
-    <div class="input-box">
-      <div class="field"><input type="text" name="name" placeholder=" " required><label>Full Name</label></div>
-      <div class="field"><input type="email" name="email" placeholder=" " required><label>Email Address</label></div>
+
+  <h2 class="heading reveal">Contact <span>me</span></h2>
+  <p class="section-note reveal">Send a message and it lands straight in my inbox. I reply as soon as I can.</p>
+
+  <div class="contact-layout">
+
+    <div class="contact-info reveal">
+      <a class="info-card" href="mailto:adarshgadekar58@gmail.com" data-tilt="8"><i class='bx bx-envelope'></i><div><b>Email</b><span>adarshgadekar58@gmail.com</span></div></a>
+      <a class="info-card" href="tel:+919673559349" data-tilt="8"><i class='bx bx-phone'></i><div><b>Phone</b><span>+91 96735 59349</span></div></a>
+      <a class="info-card" href="https://wa.me/919673559349" target="_blank" rel="noopener" data-tilt="8"><i class='bx bxl-whatsapp'></i><div><b>WhatsApp</b><span>Chat with me</span></div></a>
+      <div class="info-card" data-tilt="8"><i class='bx bx-map'></i><div><b>Location</b><span>Solapur, Maharashtra, India</span></div></div>
     </div>
- 
-    <div class="input-box">
-      <div class="field"><input type="text" name="phone" placeholder=" "><label>Mobile Number</label></div>
-      <div class="field"><input type="text" name="subject" placeholder=" "><label>Subject</label></div>
-    </div>
- 
-    <div class="field">
-      <textarea cols="30" rows="6" name="message" placeholder=" " required></textarea>
-      <label>Your Message</label>
-    </div>
- 
-    <input type="submit" value="Send Message" class="btn" id="submit-btn">
-    <p class="form-status" id="form-status"></p>
- 
-  </form>
- 
+
+    <form class="reveal" id="contact-form" novalidate>
+      <!-- spam trap: real people never see or fill this -->
+      <input type="checkbox" name="botcheck" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+      <div class="input-box">
+        <div class="field"><input type="text" name="name" placeholder=" " required autocomplete="name"><label>Full name</label></div>
+        <div class="field"><input type="email" name="email" placeholder=" " required autocomplete="email"><label>Email address</label></div>
+      </div>
+
+      <div class="input-box">
+        <div class="field"><input type="tel" name="phone" placeholder=" " autocomplete="tel"><label>Mobile number</label></div>
+        <div class="field"><input type="text" name="subject" placeholder=" "><label>Subject</label></div>
+      </div>
+
+      <div class="field">
+        <textarea cols="30" rows="6" name="message" placeholder=" " required></textarea>
+        <label>Your message</label>
+      </div>
+
+      <button type="submit" class="btn" id="submit-btn"><span>Send message</span> <i class='bx bx-send'></i></button>
+      <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+    </form>
+
+  </div>
 </section>
- 
+
 <!--================ FOOTER ================-->
 <footer class="footer">
- 
-    <div class="footer-container">
- 
-        <div class="footer-box">
-            <h3>Navigation</h3>
-            <a href="#home">Home</a>
-            <a href="#about">About</a>
-            <a href="#services">Services</a>
-            <a href="#skills">Skills</a>
-            <a href="#projects">Projects</a>
-            <a href="#contact">Contact</a>
-        </div>
- 
-        <div class="footer-box">
-            <h3>Projects</h3>
-            <a href="#projects">Hospital Management</a>
-            <a href="#projects">Employee Portal</a>
-            <a href="#projects">Portfolio Website</a>
-            <a href="#projects">Task Manager</a>
-        </div>
- 
-        <div class="footer-box">
-            <h3>Contact</h3>
-            <a href="mailto:yourmail@gmail.com">Email</a>
-            <a href="#">LinkedIn</a>
-            <a href="#">GitHub</a>
-            <a href="#">Instagram</a>
-        </div>
- 
-        <div class="footer-box">
-            <h3>Legal</h3>
-            <a href="#">Privacy Policy</a>
-            <a href="#">Terms & Conditions</a>
-            <a href="#">Cookies</a>
-            <a href="#">Disclaimer</a>
-        </div>
- 
+
+  <div class="footer-container">
+    <div class="footer-box">
+      <h3>Navigate</h3>
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#education">Education</a>
+      <a href="#contact">Contact</a>
     </div>
- 
-    <div class="footer-bottom">
-        <p>&copy; 2026 Adarsh Gadekar | All Rights Reserved.</p>
- 
-        <a href="#home" class="top-btn">
-            <i class='bx bx-up-arrow-alt'></i>
-        </a>
+
+    <div class="footer-box">
+      <h3>Projects</h3>
+      <a href="#projects">Student Management Portal</a>
+      <a href="#projects">Food Ordering &amp; Delivery</a>
+      <a href="#projects">Employee Lifecycle Management</a>
+      <a href="#projects">Hospital Management</a>
     </div>
- 
+
+    <div class="footer-box">
+      <h3>Get in touch</h3>
+      <a href="mailto:adarshgadekar58@gmail.com">Email</a>
+      <a href="https://wa.me/919673559349" target="_blank" rel="noopener">WhatsApp</a>
+      <a href="#" data-social="linkedin" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="#" data-social="github" target="_blank" rel="noopener">GitHub</a>
+      <a href="Adarsh_Gadekar_Resume.pdf" download>Resume (PDF)</a>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>&copy; <span class="year">2026</span> Adarsh Gadekar. All rights reserved.</p>
+    <a href="#home" class="top-btn" aria-label="Back to top"><i class='bx bx-up-arrow-alt'></i></a>
+  </div>
+
 </footer>
- 
-<div class="project-modal" id="projectModal">
-  <div class="modal-box">
-    <span class="close-btn">&times;</span>
+
+<!--================ PROJECT MODAL ================-->
+<div class="project-modal" id="projectModal" aria-hidden="true">
+  <div class="modal-box" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <button class="close-btn" aria-label="Close details">&times;</button>
     <div id="projectContent"></div>
   </div>
 </div>
- 
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 <script src="script.js"></script>
 </body>
 </html>
- 
